@@ -13,7 +13,7 @@ namespace Game.Scripts.Libraries
     {
         [SerializeField] private List<ScriptableObject> _libraries;
 
-        public List<IDataLibrary> GetLibraries()
+        public IReadOnlyList<IDataLibrary> GetLibraries()
         {
             if (_libraries != null)
             {
@@ -26,7 +26,6 @@ namespace Game.Scripts.Libraries
             
                 return libraries;
             }
-        
         
             throw new Exception("[LibrariesContainer]: Libraries container is null!]");
         }

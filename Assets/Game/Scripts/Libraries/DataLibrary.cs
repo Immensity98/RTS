@@ -36,5 +36,17 @@ namespace Game.Scripts.Libraries
             AssetDatabase.SaveAssets();
 #endif
         }
+
+        public T GetEntity(TEnum entity)
+        {
+            if (!_entities.ContainsKey(entity) || _entities[entity] == null)
+            {
+                Debug.LogError($"[DataLibrary] Key {entity} not exists!");
+                return null;
+            }
+            
+            return _entities[entity];
+        }
+        
     }
 }

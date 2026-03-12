@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8311fd310e00d8248984aa1a7b423396, type: 3}
-  m_Name: Peasant
+  m_Name: Zombie
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -41,47 +41,17 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
       Data: 0
-    - Name: $v
-      Entry: 7
-      Data: 2|Game.Scripts.Components.MovableComponent, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 7
-      Data: 3|Game.Scripts.Components.DamageableComponent, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  <View>k__BackingField: {fileID: 4895454805121746847, guid: 48ac83dbf02b4714eaa0c2d4b7ea3f61, type: 3}
+  <View>k__BackingField: {fileID: 0}
   <Fraction>k__BackingField: 0
   <Type>k__BackingField: 0
-  <ID>k__BackingField: Peasant
-  <MoveSpeed>k__BackingField: 2
-  <Health>k__BackingField: 50
-  <Damage>k__BackingField: 10
+  <ID>k__BackingField: 
+  <MoveSpeed>k__BackingField: 0
+  <Health>k__BackingField: 0
+  <Damage>k__BackingField: 0

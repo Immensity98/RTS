@@ -2,8 +2,14 @@ namespace Game.Scripts.Enums
 {
     public enum EUnitType
     {
+    // People
+    
         Peasant, 
         Archer,
-        Knight
+        Knight,
+        
+        // Evil
+        
+        Zombie
     }
 }
