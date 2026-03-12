@@ -23,6 +23,9 @@ namespace ForTests.Scripts
             
             Units.Add(unit);
             Units.Add(unit2);
+
+           Debug.Log("Components from unit1 = " + unit.Model.Components.Count);
+           Debug.Log("Components from unit2 = " + unit2.Model.Components.Count);
         }
     }
 }

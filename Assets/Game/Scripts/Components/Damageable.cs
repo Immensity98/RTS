@@ -10,10 +10,6 @@ namespace Game.Scripts.Components
     {
         public float Damage { get; private set; }
         
-        public void Init(UnitData data)
-        {
-            Damage = data.Damage;
-            GameLogger.Log(ELogChannel.System, "Damage = " + Damage);
-        }
+       
     }
 }

@@ -11,6 +11,9 @@ namespace Game.Scripts.Data
     [CreateAssetMenu(menuName = "Game/Data/UnitData", fileName = "NewUnitData", order = 99)]
     public class UnitData : SerializedScriptableObject, IEnumTypeMark<EUnitType>, IData
     {
+        public IReadOnlyDictionary<EStatValueType, float> Values => _values;
+        [OdinSerialize] private Dictionary<EStatValueType, float> _values;
+        
         public IReadOnlyDictionary<EComponentType, ComponentData> Components => _components;
         [OdinSerialize] private Dictionary<EComponentType, ComponentData> _components = new();
         
@@ -19,9 +22,5 @@ namespace Game.Scripts.Data
         [field: SerializeField] public EFraction Fraction { get; private set; }
         [field: SerializeField] public EUnitType Type { get; private set; }
         [field: SerializeField] public string ID { get; private set; }
-        
-        [field: SerializeField] public float MoveSpeed { get; private set; }
-        [field: SerializeField] public float Health { get; private set; }
-        [field: SerializeField] public float Damage { get; private set; }
     }
 }

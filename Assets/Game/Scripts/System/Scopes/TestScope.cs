@@ -10,5 +10,6 @@ public class TestScope : LifetimeScope
     protected override void Configure(IContainerBuilder builder)
     {
         builder.Register<UnitFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
+        builder.Register<ComponentFactory>(Lifetime.Singleton).AsSelf().AsImplementedInterfaces();
     }
 }
