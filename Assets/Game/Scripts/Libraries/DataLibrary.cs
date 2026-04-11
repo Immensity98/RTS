@@ -14,7 +14,7 @@ namespace Game.Scripts.Libraries
         where T : ScriptableObject, IEnumTypeMark<TEnum>
     {
         [SerializeField] protected string _dataPath;
-        [OdinSerialize] protected readonly Dictionary<TEnum, T> _entities = new();
+        [OdinSerialize] protected Dictionary<TEnum, T> _entities = new();
 
         public void Refresh()
         {

@@ -15,7 +15,7 @@ namespace Game.Scripts.Data
         [OdinSerialize] private Dictionary<EStatValueType, float> _values;
         
         public IReadOnlyDictionary<EComponentType, ComponentData> Components => _components;
-        [OdinSerialize] private Dictionary<EComponentType, ComponentData> _components = new();
+        [OdinSerialize] private Dictionary<EComponentType, ComponentData> _components;
         
         [field: SerializeField] public UnitView View { get; private set; }
   

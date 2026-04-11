@@ -20,8 +20,6 @@ namespace Game.Scripts.Components
                 _values = new();
                 _values.Add(EStatValueType.Speed, data.GetValue(EStatValueType.Speed));
             }
-            
-            Debug.Log("Speed = " + Values[EStatValueType.Speed]);
         }
     }
 }

@@ -21,14 +21,64 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: _values
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enums.EStatValueType,
+        Assembly-CSharp],[System.Single, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enums.EStatValueType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 4
+      Data: 50
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 4
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: _components
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enums.EComponentType,
-        Assembly-CSharp],[Game.Scripts.Components.DataComponent, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enums.EComponentType,
+        Assembly-CSharp],[Game.Scripts.Components.ComponentData, Assembly-CSharp]],
         mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enums.EComponentType,
+      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enums.EComponentType,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -50,7 +100,10 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 7
-      Data: 2|Game.Scripts.Components.MovableComponent, Assembly-CSharp
+      Data: 4|Game.Scripts.Components.MovableComponent, Assembly-CSharp
+    - Name: _values
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -65,7 +118,7 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 7
-      Data: 3|Game.Scripts.Components.DamageableComponent, Assembly-CSharp
+      Data: 5|Game.Scripts.Components.ComponentData, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -82,6 +135,3 @@ MonoBehaviour:
   <Fraction>k__BackingField: 0
   <Type>k__BackingField: 0
   <ID>k__BackingField: Peasant
-  <MoveSpeed>k__BackingField: 2
-  <Health>k__BackingField: 50
-  <Damage>k__BackingField: 10

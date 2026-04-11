@@ -55,7 +55,7 @@ namespace Game.Scripts.UnitsSystem
                 var type = component.GetType();
                 var concreteComponent = (ComponentData)Activator.CreateInstance(type); // возможно неоптимальное решение (активатор)
 
-                //concreteComponent.Init(_data);
+                concreteComponent.Init(_data);
                 _components.Add(pair.Key, concreteComponent);
             }
         }

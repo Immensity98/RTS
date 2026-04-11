@@ -16,7 +16,7 @@ namespace Game.Scripts.Libraries
 {
     public class GameLibraryWindow : OdinMenuEditorWindow
     {
-        [SerializeField] 
+        [SerializeField]
         private LibrariesContainer _librariesContainer;
 
         [MenuItem("Game/Game Library Window")]
@@ -27,6 +27,8 @@ namespace Game.Scripts.Libraries
 
         protected override OdinMenuTree BuildMenuTree()
         {
+            InitLibrariesContainer();
+
             var tree = new OdinMenuTree(supportsMultiSelect: true);
 
             tree.Add("Settings/Libraries Container", _librariesContainer);
@@ -88,7 +90,7 @@ namespace Game.Scripts.Libraries
                     {
                         library.Refresh();
                     }
-                    
+
                     GameLogger.Log(ELogChannel.System, "Libraries Refreshed!");
                 }
             }
@@ -99,7 +101,7 @@ namespace Game.Scripts.Libraries
         private void CreateNewAsset<T>(string subFolder) where T : ScriptableObject
         {
             string folderPath = Path.Combine(Constants.DATAPATH, subFolder);
-            Directory.CreateDirectory(folderPath); 
+            Directory.CreateDirectory(folderPath);
 
             string assetName = EditorUtility.SaveFilePanelInProject(
                 "Create new asset",
@@ -141,11 +143,11 @@ namespace Game.Scripts.Libraries
             ForceMenuTreeRebuild();
             MenuTree.Selection.Clear();
         }
-        
+
         public void FindLibraries()
         {
-           _librariesContainer.ClearLibraries();
-        
+            _librariesContainer.ClearLibraries();
+
             string datapath = Constants.LIBRARIESPATH;
             string[] guids = AssetDatabase.FindAssets("t:ScriptableObject", new[] { datapath });
 
@@ -156,8 +158,18 @@ namespace Game.Scripts.Libraries
 
                 if (asset != null && asset is IDataLibrary)
                 {
-                   _librariesContainer.AddLibrary((ScriptableObject)asset);
+                    _librariesContainer.AddLibrary((ScriptableObject)asset);
                 }
+            }
+        }
+
+        private void InitLibrariesContainer()
+        {
+            string[] guids = AssetDatabase.FindAssets($"t:{nameof(LibrariesContainer)}");
+            if (guids.Length > 0)
+            {
+                _librariesContainer = AssetDatabase.LoadAssetAtPath<LibrariesContainer>(
+                    AssetDatabase.GUIDToAssetPath(guids[0]));
             }
         }
     }
