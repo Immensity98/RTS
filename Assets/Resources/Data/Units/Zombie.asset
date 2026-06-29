@@ -21,64 +21,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: _values
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enums.EStatValueType,
-        Assembly-CSharp],[System.Single, mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enums.EStatValueType,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 4
-      Data: 100
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 4
-      Data: 10
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: _components
       Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enums.EComponentType,
+      Data: 0|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enums.EComponentType,
         Assembly-CSharp],[Game.Scripts.Components.ComponentData, Assembly-CSharp]],
         mscorlib
     - Name: comparer
       Entry: 7
-      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enums.EComponentType,
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enums.EComponentType,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -97,12 +47,59 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 7
-      Data: 4|Game.Scripts.Components.MovableComponent, Assembly-CSharp
-    - Name: _values
-      Entry: 6
+      Data: 2|Game.Scripts.Components.ComponentData, Assembly-CSharp
+    - Name: _statValues
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enums.EStat,
+        Assembly-CSharp],[System.Single, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enums.EStat,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 4
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 4
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -116,7 +113,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  <View>k__BackingField: {fileID: 4928473151733342883, guid: db84ccdc8ecbd914db0b99f674ad6128, type: 3}
+  <View>k__BackingField: {fileID: 8682688340051956521, guid: d279c69ac8e9c7341b79ebccecc73942, type: 3}
   <Fraction>k__BackingField: 1
   <Type>k__BackingField: 3
-  <ID>k__BackingField: 
+  <ID>k__BackingField: Zombie

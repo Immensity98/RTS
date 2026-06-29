@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7459910565234498771}
   - component: {fileID: 887443449611711596}
   - component: {fileID: 4928473151733342883}
+  - component: {fileID: 7982557160153969813}
   m_Layer: 0
   m_Name: TestUnit2
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 723fb262443d3af43a0c34a0eee0b64d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,3 +119,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a541f9fed3eb465bbbd806c6b27c0c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7982557160153969813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2709508439472819842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9000045a5f6698448a2f218f93ce31cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Model>k__BackingField:
+    ID: 
+    Position: {x: 0, y: 0, z: 0}
+  <View>k__BackingField: {fileID: 0}

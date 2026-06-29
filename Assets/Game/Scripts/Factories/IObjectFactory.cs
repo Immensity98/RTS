@@ -1,6 +1,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Data;
+using Game.Scripts.Enums;
 using UnityEngine;
 
 namespace Game.Scripts.Factories
@@ -12,6 +13,6 @@ namespace Game.Scripts.Factories
     
     public interface IObjectFactory<T, D>  where T : class where D : IData
     {
-        public UniTask<T> CreateAsync(D data, CancellationToken cancellation = default);
+        public UniTask<T> CreateAsync(D data, ETeam team, CancellationToken cancellation = default);
     }
 }

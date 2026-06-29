@@ -1,9 +1,9 @@
-using Game.Scripts.Data;
+using Game.Scripts.Enums;
 
 namespace Game.Scripts.Components
 {
     public interface IComponent
     {
-        public void Init(IData data);
+        public object GetValue(EStat stat);
     }
 }

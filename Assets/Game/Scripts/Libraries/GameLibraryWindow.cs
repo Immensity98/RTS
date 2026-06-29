@@ -3,6 +3,7 @@
 using System.IO;
 using System.Linq;
 using Data.Libraries;
+using Game.Scripts.Components;
 using Game.Scripts.Data;
 using Game.Scripts.Enums;
 using Game.Scripts.System;
@@ -70,7 +71,7 @@ namespace Game.Scripts.Libraries
                     _librariesContainer.GetLibrary<BuildingDataLibrary>().Refresh();
                 }
 
-                if (SirenixEditorGUI.ToolbarButton("+ SceneData"))
+                if (SirenixEditorGUI.ToolbarButton("+ Scene"))
                 {
                     CreateNewAsset<SceneData>("Scenes");
                     _librariesContainer.GetLibrary<SceneDataLibrary>().Refresh();
@@ -82,7 +83,7 @@ namespace Game.Scripts.Libraries
                         DeleteAsset(selected.Value);
                 }
 
-                if (SirenixEditorGUI.ToolbarButton("Refresh Libraries"))
+                if (SirenixEditorGUI.ToolbarButton("Refresh"))
                 {
                     FindLibraries();
 

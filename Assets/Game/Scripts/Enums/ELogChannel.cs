@@ -5,6 +5,7 @@ namespace Game.Scripts.Enums
         System,
         UI,
         Info,
-        Warning
+        Warning,
+        Error
     }
 }

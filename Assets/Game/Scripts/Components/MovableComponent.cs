@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using Game.Scripts.Data;
 using Game.Scripts.Enums;
-using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Game.Scripts.Components
 {
     [Serializable]
-    public class MovableComponent : ComponentData, IMovable
+    public class MovableComponent : Component
     {
-        public IReadOnlyDictionary<EStatValueType, float> Values => _values;
-        [OdinSerialize] private Dictionary<EStatValueType, float> _values;
+        private Dictionary<EStat, float> _statValues;
 
-        public override void Init(IData data)
+        public object GetValue(EStat stat)
         {
-            if (data != null)
-            {
-                _values = new();
-                _values.Add(EStatValueType.Speed, data.GetValue(EStatValueType.Speed));
-            }
+            throw new NotImplementedException();
+        }
+
+        public void SetValue(EStat stat, float value)
+        {
+            Debug.Log(_statValues);
         }
     }
 }

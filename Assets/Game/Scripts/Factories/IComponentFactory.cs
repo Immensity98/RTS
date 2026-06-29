@@ -1,9 +1,10 @@
 ﻿using Game.Scripts.Components;
+using Game.Scripts.Enums;
 
 namespace Game.Scripts.Factories
 {
     public interface IComponentFactory
     {
-        public T Create<T>() where T : IComponent;
+        public Component Create(ComponentData data);
     }
 }

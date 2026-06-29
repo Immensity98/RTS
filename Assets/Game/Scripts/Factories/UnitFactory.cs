@@ -1,39 +1,54 @@
-using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Game.Scripts.Components;
 using Game.Scripts.Data;
+using Game.Scripts.Enums;
 using Game.Scripts.UnitsSystem;
+using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Game.Scripts.Factories
 {
-    public class UnitFactory : IObjectFactory<UnitContainer, UnitData>
+    public class UnitFactory : IObjectFactory<Unit, UnitData>
     {
         private ComponentFactory _componentFactory;
 
-        public UnitFactory(ComponentFactory componentFactory)
+        public UnitFactory(ComponentFactory factory)
         {
-            _componentFactory = componentFactory;
+            _componentFactory = factory;
         }
 
-        public async UniTask<UnitContainer> CreateAsync(UnitData data, CancellationToken cancellation = default)
+        public async UniTask<Unit> CreateAsync(UnitData data, ETeam team, CancellationToken cancellation = default)
         {
-            var model = new UnitModel(data);
-
-            await UniTask.Yield(PlayerLoopTiming.Update);
+            var model = new UnitModel(data, team);
             var view = Object.Instantiate(data.View);
 
-            foreach (var kvp in model.Components)
+            if (view.TryGetComponent(out Unit unit))
             {
-                var componentData = kvp.Value;
-                var type = componentData.GetType();
+                InitializeComponents(model, data);
+                unit.Initialize(model, view);
 
-                var component = (IComponent)Activator.CreateInstance(type);
-                component.Init(data); 
+                return unit;
             }
 
-            return new UnitContainer(model, view);
+            Debug.LogError($"[UnitFactory] Prefab '{view.name}' does not have Unit component!");
+            return null;
+        }
+        
+        private void InitializeComponents(UnitModel model, UnitData data)
+        {
+            if (data == null)
+            {
+                Debug.LogError("[UnitFactory] Data is null!]");
+                return;
+            }
+
+            foreach (var component in data.Components)
+            {
+                if(component.Value == null)
+                    continue;
+                
+                model.AddComponent(component.Key, _componentFactory.Create(component.Value));
+            }
         }
     }
 }

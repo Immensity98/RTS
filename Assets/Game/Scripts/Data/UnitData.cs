@@ -11,9 +11,6 @@ namespace Game.Scripts.Data
     [CreateAssetMenu(menuName = "Game/Data/UnitData", fileName = "NewUnitData", order = 99)]
     public class UnitData : SerializedScriptableObject, IEnumTypeMark<EUnitType>, IData
     {
-        public IReadOnlyDictionary<EStatValueType, float> Values => _values;
-        [OdinSerialize] private Dictionary<EStatValueType, float> _values;
-        
         public IReadOnlyDictionary<EComponentType, ComponentData> Components => _components;
         [OdinSerialize] private Dictionary<EComponentType, ComponentData> _components;
         
