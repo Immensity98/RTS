@@ -13,9 +13,8 @@ namespace Game.Scripts.Data
     {
         public IReadOnlyDictionary<EComponentType, ComponentData> Components => _components;
         [OdinSerialize] private Dictionary<EComponentType, ComponentData> _components;
-        
         [field: SerializeField] public UnitView View { get; private set; }
-  
+        
         [field: SerializeField] public EFraction Fraction { get; private set; }
         [field: SerializeField] public EUnitType Type { get; private set; }
         [field: SerializeField] public string ID { get; private set; }

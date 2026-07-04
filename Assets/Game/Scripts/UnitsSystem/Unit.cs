@@ -5,8 +5,11 @@ namespace Game.Scripts.UnitsSystem
 {
     public class Unit : MonoBehaviour
     {
-        [field: SerializeField] public UnitModel Model { get; private set; }
-        [field: SerializeField] public UnitView View { get; private set; }
+        [field: SerializeField] 
+        public UnitModel Model { get; private set; }
+        
+        [field: SerializeField] 
+        public UnitView View { get; private set; }
 
         public void Initialize(UnitModel model,
             UnitView view)
