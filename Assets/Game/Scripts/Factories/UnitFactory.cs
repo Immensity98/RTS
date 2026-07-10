@@ -2,6 +2,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Game.Scripts.Data;
 using Game.Scripts.Enums;
+using Game.Scripts.System.Logger;
 using Game.Scripts.UnitsSystem;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -38,7 +39,7 @@ namespace Game.Scripts.Factories
         {
             if (data == null)
             {
-                Debug.LogError("[UnitFactory] Data is null!]");
+                GameLogger.Log(ELogChannel.Error, "[UnitFactory] Data is null!]");
                 return;
             }
 

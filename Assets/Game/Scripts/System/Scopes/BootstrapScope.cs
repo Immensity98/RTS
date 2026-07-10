@@ -16,7 +16,7 @@ namespace Game.Scripts.System.Scopes
         {
             base.Awake();
             DontDestroyOnLoad(gameObject); 
-            GameLogger.Log(ELogChannel.System, "[BootstrapScope] Bootstrap Scope has been initialized!");
+            GameLogger.Log(ELogChannel.System, "[BootstrapScope] Bootstrap Scope has been initialized");
         }
 
         protected override void Configure(IContainerBuilder builder)

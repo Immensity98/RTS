@@ -7,8 +7,7 @@ namespace Game.Scripts.Components
     public class Component : IComponent
     {
         public IReadOnlyDictionary<EStat, float> StatValues => _statValues;
-        [OdinSerialize] 
-        protected Dictionary<EStat, float> _statValues;
+        [OdinSerialize] protected Dictionary<EStat, float> _statValues;
 
         public void Init(ComponentData data)
         {

@@ -19,7 +19,7 @@ namespace Game.Scripts.UnitsSystem
         
         [ShowInInspector]
         [OdinSerialize] 
-        public Dictionary<EComponentType, IComponent> Components => _components;
+        public IReadOnlyDictionary<EComponentType, IComponent> Components => _components;
         private Dictionary<EComponentType, IComponent> _components;
 
         private UnitData _data;

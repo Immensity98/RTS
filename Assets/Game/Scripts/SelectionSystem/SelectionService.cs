@@ -1,6 +1,7 @@
-using UnityEngine;
-
-public class SelectionService : MonoBehaviour
+namespace Game.Scripts.SelectionSystem
 {
+    public class SelectionService 
+    {
 
+    }
 }
